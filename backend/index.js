@@ -32,7 +32,7 @@ app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
 
 app.use(express.static(path.join(_dirname, "/frontend/dist")));
-app.get("*", ( _, res) => {
+app.get('*', ( _, res) => {
   res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
 });
 

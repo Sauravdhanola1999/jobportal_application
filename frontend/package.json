@@ -25,6 +25,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
     "framer-motion": "^11.18.0",
+    "jobportal": "file:..",
     "lucide-react": "^0.469.0",
     "next-themes": "^0.4.4",
     "react": "^18.3.1",

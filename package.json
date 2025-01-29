@@ -1,13 +1,13 @@
 {
-  "name": "backend",
+  "name": "jobportal",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "dev": "nodemon backend/index.js",
-  "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-  "start": "nodemon backend/index.js"
-},
+    "dev": "nodemon backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "nodemon backend/index.js"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -24,6 +24,7 @@
     "mongoose": "^8.9.3",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.9",
+    "path": "^0.12.7",
     "token": "^0.1.0",
     "web": "^0.0.2"
   }
