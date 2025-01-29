@@ -1,12 +1,24 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const LatestJobCards = ({ job }) => {
   const navigate = useNavigate();
+
+  const { user } = useSelector((store) => store.auth);
+
+  const handleCardClick = () => {
+    if (user) {  // Check if the user is authenticated
+      navigate(`/description/${job._id}`);
+    } else {
+      navigate("/login");  // Redirect to login page if not authenticated
+    }
+  };
+
   return (
     <div
-      onClick={() => navigate(`/description/${job._id}`)}
+      onClick={handleCardClick}
       className="transform hover:scale-110 transition-transform duration-300 p-5 rounded-md shadow-xl border border-gray-100 cursor-pointer"
     >
       <div>
